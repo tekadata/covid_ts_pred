@@ -11,7 +11,7 @@ Please document the project the better you can.
 ##  package project install & setup
 
 ```bash
-mkdir ~/code/<PROJECT_LEADER_GITHUB_NICKNAME> && cd "$_"
+mkdir ~/code/Teky-Teka && cd Teky-Teka
 git clone git@github.com:Teky-Teka/covid_ts_pred.git
 cd covid_ts_pred
 ```
