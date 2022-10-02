@@ -1,0 +1,12 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+import sys
+import os
+import covid_ts_pred
+from covid_ts_pred.z_utils.project import get_py_path
+
+from toto.lib import who_am_i
+sys.path
+os.environ['PYTHONPATH'][:-1]
+covid_ts_pred.__file__
+get_py_path()
