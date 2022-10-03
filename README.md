@@ -8,12 +8,14 @@
 
 Please document the project the better you can.
 
-##  package project install & setup
+##  package project first installation & setup
 
 ```bash
-mkdir ~/code/Teky-Teka && cd Teky-Teka
+mkdir ~/code
+mkdir ~/code/Teky-Teka
+cd ~/code/Teky-Teka
 git clone git@github.com:Teky-Teka/covid_ts_pred.git
-cd covid_ts_pred
+cd ~/code/Teky-Teka/covid_ts_pred
 ```
 
 ### Create/Activate virtualenv
