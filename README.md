@@ -8,6 +8,9 @@
 
 Please document the project the better you can.
 
+##  Front-end mockup first proposal
+![https://github.com/Teky-Teka/covid_ts_pred/blob/2ebaf714d19a696c2620c2332272d3c0f1f5a037/data_files/images/kurt_mock-up-1_221004.png](https://github.com/Teky-Teka/covid_ts_pred/blob/2ebaf714d19a696c2620c2332272d3c0f1f5a037/data_files/images/kurt_mock-up-1_221004.png)
+
 ##  package project first installation & setup
 
 ```bash
