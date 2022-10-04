@@ -46,19 +46,10 @@ pip freeze | grep covid_ts_pred
 ```
 check `covid_ts_env` version is in pip: `covid_ts_pred==0.1`
 
-### Test:
+### 🔥 Check your setup
+
 ```bash
 make clean install test
-```
-
-### Create a new project on `gitlab.com/<YOUR-GITHUB-NAME>/covid_ts_pred`
-### Populate it:
-
-```bash
-###   e.g. if group is "Teky-Teka" and project_name is "covid_ts_pred"
-git remote add origin git@github.com:Teky-Teka/covid_ts_pred.git
-git push -u origin master
-git push -u origin --tags
 ```
 
 Functionnal test with a script:
@@ -69,38 +60,6 @@ mkdir tmp
 cd tmp
 covid_ts_pred-run
 ```
-
-## Installation of the project
-
-The clone setup (only for contributor x1).
-
-Go to `https://github.com/Teky-Teka/covid_ts_pred` to see the project, manage issues,
-setup you ssh public key, ...
-
-Create a python3 virtualenv and activate it:
-
-```bash
-pyenv virtualenv covid_tsp_env
-cd ~/code/Teky-Teka/covid_ts_pred
-pyenv local covid_tsp_env
-pip install --upgrade pip; pip install -r requirements.txt
-pip freeze
-```
-
-Clone the project and install it:
-
-```bash
-git clone git@github.com:Teky-Teka/covid_ts_pred.git
-cd covid_ts_pred
-pip install -r requirements.txt
-make clean install test                # install and test
-```
-Functionnal test with a script:
-
-```bash
-cd
-mkdir tmp
-cd tmp
 covid_ts_pred-run
 ```
 
@@ -266,24 +225,3 @@ cd ~/code/Teky-Teka/covid_ts_pred/ && echo "export PYTHONPATH=\"$(pwd):\$PYTHONP
 ```
 
 👉 Copy the resulting output line from your terminal and paste it at the bottom of your ~/.zshrc file. Don't forget to save and restart all your terminal windows to take this change into account.
-
-
-
-### 🔥 Check your setup
-
-Go to your `covid_ts_pred` sub-folder (the one with the Python .py files) and run an `ipython` session:
-
-```bash
-cd ~/code/Teky-Teka/covid_ts_pred
-ipython
-```
-
-Then type the following to check that the setup phase from the previous exercise worked:
-
-```python
-from indicator import Indicator
-Indicator().ping()
-# => pong
-```
-
-If you get something else than `pong`, ask teammates or raise a ticket to get some help from a TA. You might have a problem with the `$PYTHONPATH`.
