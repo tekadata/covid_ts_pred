@@ -6,7 +6,8 @@
 - Data Source: https://www.bsg.ox.ac.uk/research/research-projects/covid-19-government-response-tracker
 - Type of analysis: Machine Learning ARIMA model + Deep Learning RNN model
 
-Please document the project the better you can.
+##  Demo day after 10 days of work
+![Le Wagon Online | #991 Data Science | Product Demo | Covid Prediction](https://youtu.be/VbCLrCfPfsg)
 
 ##  Front-end mockup first proposal
 ![https://github.com/Teky-Teka/covid_ts_pred/blob/2ebaf714d19a696c2620c2332272d3c0f1f5a037/data_files/images/kurt_mock-up-1_221004.png](https://github.com/Teky-Teka/covid_ts_pred/blob/2ebaf714d19a696c2620c2332272d3c0f1f5a037/data_files/images/kurt_mock-up-1_221004.png)
