@@ -11,7 +11,7 @@ backgroundColor="#FFFFFF"
 secondaryBackgroundColor="#F0F2F6"
 textColor="#262730"
 font="sans serif"
-""""
+"""
 st.markdown(
     '''
     #        HELLO !
@@ -40,7 +40,7 @@ option=st.selectbox('PLEASE SELECT YOUR COUNTRY',
 
 
 st.write('YOU SELECTED:', option)
-""""
+"""
 option = 'France'
 # if country_code = 'Brazil':
 # if country_code = 'France'
@@ -71,8 +71,8 @@ if __name__ == "__main__":
     X_test, y_test, X_train, y_train, df, y = preprocessing(option.capitalize(), n_days=len(date_prediction))
 
     # 3. Prediction
-    list_pred, X_predict = predict(X_test=X_test, country=option.capitalize(), data=df, y=y, n_days=len(date_prediction))
-
+    list_pred, X_predict = predict(X_test=X_test,y_train=y_train, country=option.capitalize(), df=df, y=y, n_days=len(date_prediction))
+    print('list_pred', list_pred, 'X_predict', X_predict)
     # 4. Plot the predicted and real total deaths by COVID-19
     # st.line_chart(data=[y_test, list_pred], x=date_prediction)
 

@@ -1,17 +1,14 @@
 import pickle
 import pandas as pd
 import numpy as np
-from covid_ts_pred.b_viz.b_preproc.preprocessing import preprocessing
-from project import get_path
+from covid_ts_pred.c_eng.engineering import get_best_models_path
 
 
-def predict(country,  X_test, y_test, X_train, y_train, df, y, n_days=10)-> tuple:
-   """
+def predict(country,  X_test, y_train, df,  y, n_days=10)-> tuple:
+    """
     predict(country,  X_test, y_test, X_train, y_train, df, y, n_days=10)-> tuple:
     function that take in parameter:
      - a X test df: `X_test` (DataFrame),
-     - a y test df: `y_test` (DataFrame),
-     - a X train df: `X_train` (DataFrame),
      - a y train df: `y_train` (DataFrame),
      - a df: `df` (DataFrame),
      - a y df: `y` (DataFrame)
@@ -21,12 +18,11 @@ def predict(country,  X_test, y_test, X_train, y_train, df, y, n_days=10)-> tupl
      - a prediction list: `list_pred` (list),
      - a X prediction df: `X_predict` (DataFrame).
     """
-
-    model=pickle.load(open(get_path('c_model', 'ca_models', f'model_{country}.pkl'),'rb'))
-
+    model=pickle.load(open(get_best_models_path(f'model_{country}.pkl'),'rb'))
+    X_test_columns=df.drop(columns=['total_deaths','new_cases','new_deaths'])
     X_test_df = pd.DataFrame(X_test, columns=X_test_columns.columns)
 
-    X_predict = X_predict.reset_index(drop=True)
+    X_predict = X_test_df.reset_index(drop=True)
     for i in range(1,n_days):
         X_predict.loc[i,'containment_and_health':'total_boosters']=X_predict.loc[0,'containment_and_health':'total_boosters']
     min_num = min(y)

@@ -5,7 +5,7 @@ from covid_ts_pred.c_eng.engineering import get_csv_out_path
 
 
 def preprocessing(country, n_days=10) -> tuple:
-   """
+    """
     preprocessing(country) -> tuple:
     function that take in parameter:
      - a country name: `country` (string),
@@ -21,16 +21,16 @@ def preprocessing(country, n_days=10) -> tuple:
     #countries=[]
     #path='data/out_csv'
     #for country in country_list:
-    df=pd.read_csv(get_csv_out_path(f"index_{country}.csv"))
-    df=df.set_index('date')
+    df = pd.read_csv(get_csv_out_path(f"index_{country}.csv"))
+    df = df.set_index('date')
 
     # Next `n_days` timeseries shifting
     for n in range(1, n_days + 1):
         df[f'day-{n}']=df['total_deaths'].shift(periods=n)
 
     # Data `n_days` first time series truncking
-    data_index = data_index.iloc[n_days: , :]
-    print('data_index.shape', data_index.shape)
+    df = df.iloc[n_days: , :]
+    print('df.shape', df.shape)
     # NA data filling
     df=df.fillna(0)
     # X and y data splitting
